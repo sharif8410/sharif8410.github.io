@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style type="text/css">
+
+	.col-lg-4{
+		
+		margin-bottom: 20px;
+		
+	}
+
+	.col-3{
+		background-color: #e6e6e66e;
+	}
+
+	.active{
+		color: #232423;
+		font-weight: bold;
+	}
+
+	
+	
+	.center-item{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.btn-primary {
+    color: #fff;
+    background-color: #ff9900;
+    border-color: #ff9900; 
+}
+
+	body{
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 500;
+	}
+
+	#programmeRow{
+		margin-top: 15px;
+	   
+	}
+
+	.quickView{
+		color: rgba(255,153,0,0.5);
+	}
+
+
+	a:link {
+		  text-decoration: none;
+		}
+
+	a:visited {
+	  text-decoration: none;
+	}
+
+	a:hover {
+	  text-decoration: none;
+	}
+
+	a:active {
+	  text-decoration: underline;
+	}
+	.readButton{
+		color: black;
+	}
+</style>
+
+
+</head>
+
+<body>
+
+<div class="bd-masthead">
+	<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="">
+  	<span> <small>Partners: </small></span>
+    <img src="./images/DAAD.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <img src="./images/FHDo.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <img src="./images/leuven.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <img src="./images/NTNU.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <img src="./images/undad.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+  </a>
+  <ul style="margin-left: 215px; margin-right: auto" class="nav justify-content-center">
+	  <li class="nav-item">
+	    <a style="letter-spacing: 2px; color: #696868" class="nav-link" aria-current="page" href="#">DEE PLATFORM</a>
+	  </li>
+  </ul>
+
+  <img src="./images/user.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+
+</nav>
+	<!-- <div class="container"> -->
+		<div style="margin-left: 0px;margin-right: 0px;" class="row">
+			<div  style="padding-left:15px" class="col-3"> <!-- Quick access -->
+				<br>
+				<h5 style="text-align: center;">Electives to select from</h5>
+				<hr>
+				<p><small style="color: red">Note: You cannot select an elective at the moment. Please wait till the semester is active.</small></p>
+				<!-- elective one -->
+				<div id="electiveRE" class="card shadow elective text-white" style="max-width: 300px;">
+					<img style="opacity: 0.50" src="./images/img8.png" class="card-img" alt="...">
+				      <div class="card-img-overlay">
+				        <h4 style="font-weight: bold; font-size: 1.5rem" class="card-title">Requirements Engineering</h4>
+				        <p class="card-text"><small style="font-weight: 500">Credit hours: 6ECTS</small></p>
+				        <p class="card-text"><span><a style="color: #ffffff;" href="" onclick="changeTitle('Requirements Engineering')" data-toggle="modal" data-target="#staticBackdrop" class ="quickView btn btn-sm btn-success"></a></span> <!-- <span> <a id="MLButton" class="btn btn-sm btn-danger" onclick="selectRE()" href="#">Register</a></span> --></p>
+				      </div>
+				</div>
+				<!-- elective two -->
+				<div id="electiveIP" class="card shadow elective text-white" style="max-width: 300px;">
+					<img style="opacity: 0.50" src="./images/img7.jpg" class="card-img" alt="...">
+				      <div class="card-img-overlay">
+				        <h4 style="font-weight: bold; font-size: 1.2rem" class="card-title">Information processing and data analytics</h4>
+				        <p class="card-text"><small style="font-weight: 500">Credit hours: 6ECTS</small></p>
+				        <p class="card-text"><span><a style="color: #ffffff;" href="" onclick="changeTitle('Information processing and data analytics')" data-toggle="modal" data-target="#staticBackdrop" class ="quickView btn btn-sm btn-success"></a></span> <!-- <span> <a id="IoTButton" class="btn btn-sm btn-danger" onclick="selectIP()" href="#">Register</a></span> --></p>
+				      </div>
+				</div>
+			</div>
+
+			<div class="col-6"> <!-- courses content -->
+				<br>
+				<div class="justify-content-around" style="font-size: 1.5rem; color:#6d6e6d;">
+					<span><a  href="index.html">Semester 1</a></span>&nbsp;&nbsp;
+					<span><a class="active" href="semester2.html">Semester 2</a></span>&nbsp;&nbsp;
+					<span><a  href="semester3.html">Semester 3</a></span>&nbsp;&nbsp;
+				</div>
+				<br>
+				
+				<div id="programmeRow" class="row justify-content-around"> <!--first row -->
+						
+
+					<div class="col-lg-4">
+						<div class="card shadow-lg">
+						  <img src="./images/img9.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Usability Engineering</h5>
+						    <p class="card-text"> <small>Status: Mandatory</small></p>
+						    <p class="card-text"><a href="" onclick="changeTitle('Usability Engineering')" data-toggle="modal" data-target="#staticBackdrop" class ="readButton quickView"></a></p>
+						  </div>
+						</div>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="card shadow-lg">
+						  <img src="./images/img8.png" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Software-intensive solutions</h5>
+						    <p class="card-text"> <small>Status: Mandatory</small></p>
+						    <p class="card-text"><a href="" onclick="changeTitle('Software-intensive solutions')" data-toggle="modal" data-target="#staticBackdrop" class ="readButton quickView"></a></p>
+						  </div>
+						</div>
+					</div>
+				
+					<div class="col-lg-4">
+						<div class="card shadow-lg">
+						  <img src="./images/img6.jpeg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Digital Systems</h5>
+						    <p class="card-text"> <small>Status: Mandatory</small></p>
+						    <p class="card-text"><a href="" onclick="changeTitle('Digital Systems')" data-toggle="modal" data-target="#staticBackdrop" class ="readButton quickView"></a></p>
+						  </div>
+						</div>
+					</div>
+
+					<div class="col-lg-4">
+						<div class="card shadow-lg">
+						  <img src="./images/img1.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Transversal Skills</h5>
+						    <p class="card-text"> <small>Status: Mandatory</small></p>
+						    <p class="card-text"><a href="" onclick="changeTitle('Transversal Skills')" data-toggle="modal" data-target="#staticBackdrop" class ="readButton quickView"></a></p>
+						  </div>
+						</div>
+					</div>
+
+
+					<div id="mandatoryRE" style="display: none;" class="col-lg-4">
+						<div class="card shadow-lg">
+						  <img src="./images/img8.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Requirements Engineering</h5>
+						    <p class="card-text"> <small>Status: Elective</small></p>
+						    <p class="card-text"><a href="" onclick="changeTitle('Requirements Engineering')" data-toggle="modal" data-target="#staticBackdrop" class ="readButton quickView"></a></p>
+						  </div>
+						</div>
+					</div>
+
+					<div id='mandatoryIP' style="display: none;" class="col-lg-4">
+						<div class="card shadow-lg">
+						  <img src="./images/img7.jpg" class="card-img-top" alt="...">
+						  <div class="card-body">
+						    <h5 class="card-title">Information processing and data analytics</h5>
+						    <p class="card-text"> <small>Status: Elective</small></p>
+						    <p class="card-text"><a href="" onclick="changeTitle('Information processing and data analytics')" data-toggle="modal" data-target="#staticBackdrop" class ="readButton quickView"></a></p>
+						    </a>
+						  </div>
+						</div>
+					</div>
+
+				</div>
+			</div> <!--end first row -->
+		
+			<div style="padding-right:15px; align-items: center; align-content: center;" class="col-3">
+				<h5 style="text-align: center;"> Classes for  <span id="date"></span></h5>
+					<hr>
+					<br>
+					<div style="text-align: center; ">
+						<form method="get">
+							<input type="date" style="max-width: 250px" class="form-control" placeholder="Select a date" onchange='changeCourses()'  id="current_date" >
+							
+						</form>
+					</div>
+					
+					<br>
+					<!-- progress bar -->
+					<ul class="events">
+
+                        <li>
+                            <time id="course1time" datetime="10:03">10:00AM<h6>To 12:15PM</h6></time>
+                            <span><strong id="course1name">R&amp;D Project</strong><small id="course1professor"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+						  <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+						</svg>Prof. Christian Reimann </small> <h6>Lecture room 05</h6></span> </li>
+
+                        <li id="course2">
+                            <time id="course2time" datetime="10:03">12:30PM<h6>To 15:15PM</h6></time>
+                            <span><strong id="course2name">Digital Systems 1</strong><small id="course2professor"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+						  <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+						</svg> Dr Ingo Kegrel</small> <h6>Lecture room 13</h6> </span></li>
+                        <li id="course3">
+                            <time id="course3time" datetime="10:03">16:00PM<h6>To 18:30PM</h6></time>
+                            <span><strong id="course3name">German</strong><small id="course3professor"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+						  <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+						</svg> Dr. Buket Pehlivan</small> <h6>Lecture room 09</h6></span></li>
+					  
+
+					</ul>
+			</div> <!-- right side of course -->	
+
+		</div>
+
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Digital Business Ecosystems (MOD-E05) Content</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h4 class="head">Module Description</h4>
+                            <p class="card-text">
+                                The term “Digital Business Ecosystem” (DBE) emerged beginning of the 2000s by adding
+                                “Digital” to Moore’s (1996) “Business Ecosystem” concept. The analysis,structuring, development and management of DBEs combine socio-economic concepts, ICT and biological concepts. Students will learn to understand, to analyse, to evaluate and to develop DBE for different application scenarios.
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card shadow-lg">
+                                <!-- <img src="./images/img4.jpg" class="card-img-top" alt="..."> -->
+                                <div class="card-body">
+                                    <h5 class="card-title">Module Cordinator</h5>
+                                    <h5 class="card-title">Dr. Nhiem Lu</h5>
+                                    <p class="card-text"> <small>University:</small><span><img src="./images/FHDo.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy"></span></p>
+                                    <p class="card-text"><a href="nhiem.lu@fh-dortmund.de">nhiem.lu@fh-dortmund.de</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- module outline -->
+
+                    <div class="row"> <!-- second row -->
+                        <div class="col-md-3">
+                            <h5>Code Number</h5>
+                            <h6>48204</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Workload</h5>
+                            <h6>180h</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Credits</h5>
+                            <h6>6</h6>
+                        </div>
+                        <div class="col-md-2">
+                            <h5>Semester</h5>
+                            <h6>2</h6>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Duration</h5>
+                            <h6>1 Semester</h6>
+                        </div>
+                    </div> <!-- end of second row -->
+                    <hr>
+                    <div class="row"><!-- start of third row -->
+                        <div class="col-md-3 justify-content-center">
+                            <h4>Course Structure</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <h6>1. Cybernetics and systems view</h6>
+                                <ul>
+                                    <li>Biological Systems</li>
+                                    <li>Cybernetics and Systems theory, social theories</li>
+                                    <li>System models, e.g. Ropohl, Systems engineering</li>
+                                    <li>Evolutionary and self-organizing systems</li>
+                                </ul>
+                            </div>
+
+                            <div class="row">
+                                <h6>2. Socio-economic view</h6>
+                                <ul>
+                                    <li>Business Ecosystems</li>
+                                    <li>Business processes, business models and value chains</li>
+                                    <li>Innovation, competition and dynamics in business ecosystems</li>
+                                    <li>Analysis of Case Studies</li>
+                                </ul>
+                            </div>
+
+                            <div class="row">
+                                <h6>3. Information Communication Technology view</h6>
+                                <ul>
+                                    <li>Information supply chain</li>
+                                    <li>ICT architectures and tools for DBEs</li>
+                                    <li>Efficiency and effectivity for DBEs</li>
+                                    <li>Analysis of Case Studies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- end of third row -->
+                    <hr>
+                    <div class="row"> <!-- start of fouth row -->
+                        <div class="col-md-3">
+                            <h4>Focus</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <h6>1. Application Focus</h6>
+                            <ul>
+                                <li>
+                                    Students will be guided through a case study project where they set up a small DBE for an example case. They form teams and set up IT tools.
+                                </li>
+                            </ul>
+
+                            <h6>2. Scientific Focus</h6>
+                            <ul>
+                                <li>
+                                    Students will do literature review on DBE and do scientific discussion and reflections
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div><!-- end of fourth row -->
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Mode of Assessment</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <h6>1. Theoretical knowledge</h6>
+                            <ul>
+                                <li> Oral or written exam at the end of the course (50%)</li>
+                            </ul>
+
+                            <h6>2. Practical Skills</h6>
+                            <ul>
+                                <li>contributions within case study project (team presentation) => demonstration of the result (50%)</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row"><!-- start of outcomes row -->
+                        <div class="col-md-3">
+                            <h4>Learning Outcomes</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row">
+                                <p>1. Knowledge: Students can</p>
+                                <ul>
+                                    <li>explain the basics of cybernetics and systems theory</li>
+                                    <li>explain and compare digital business models</li>
+                                    <li>explain methods and tools for information supply chains</li>
+                                    <li>explain the core concepts of DBEs</li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <p>2. Skills: Students can</p>
+                                <ul>
+                                    <li>analyze and develop value chains and information supply chains</li>
+                                    <li>apply ICT tools for information supply chains</li>
+                                    <li>develop tailored processes for DBEs</li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <p>3. Competence - attitude</p>
+
+                                <ul>
+                                    <li>Students train to develop and discuss concepts in teams</li>
+                                    <li>Students work in teams and set up DBE environments for their respective case study project</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div><!-- end of outcomes row -->
+                    <hr>
+                    <div class="row"><!-- start of Teaching methods row -->
+                        <div class="col-md-3">
+                            <h4>Teaching and training methods</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <ol>
+                                <li>Theoretical knowledge: Lectures introducing concepts, methods and tools</li>
+                                <li>Practical Skills: Group work in the case study project to practice concepts and methods, to develop skills and to work on case studies</li>
+                                <li>Scientific Competences: Presentations to communicate results and do a scientific discussion and reflection</li>
+                            </ol>
+                        </div>
+                    </div><!-- end of Teaching methods row -->
+                    <hr>
+                    <div class="row"><!-- start of reference  row -->
+                        <div class="col-md-3">
+                            <h4>References</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <ol>
+                                <li>F. Nashira, A. Nicolai, P. Dini, M.L. Louarn, L.R. Leon: Digital Business Ecosystem. European Commission, 2010, Retrieved from http://www.digital-ecosystems.org/book/de-book2007.html, last accessed June 06, 2013</li>
+                                <li>
+                                    S. Sun, J. Yen: Information Supply Chain: A Unified Framework for Information-Sharing, P. Kantor et al. (Eds.): ISI 2005, LNCS 3495, pp. 422 – 428, 2005
+                                </li>
+                                <li>
+                                    Prince Kwame Senyo, Kecheng Liu, John Effah, Digital business ecosystem: Literature review and a framework for future research, International Journal of Information Management, Volume 47, August 2019, Elsevier
+                                </li>
+                                <li>
+                                    Alghatam, Noora. "Public and Private Sector Collaboration to Establish Digital Business Ecosystems." Proceedings of the 20th Annual International Conference on Digital Government Research. 2019.
+                                </li>
+                            </ol>
+                        </div>
+                    </div><!-- end of reference row -->
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> <!-- mastheadEnd -->
+
+
+<!-- Button trigger modal -->
+
+ 
+
+<script type="text/javascript">
+
+	// ELective Machine learning
+	var mandatoryRE = document.getElementById('mandatoryRE');
+	var electiveRE = document.getElementById('electiveRE');
+	var REButton = document.getElementById('REButton');
+	
+	// ELective IoT
+	var mandatoryIP = document.getElementById('mandatoryIP');
+	var electiveIP = document.getElementById('electiveIP');
+	var IPButton = document.getElementById('IPButton');
+
+	function selectRE(){
+		mandatoryRE.style.display = 'block';
+		electiveRE.style.display = 'none';
+		IoTButton.style.display = 'none';
+	}
+
+	function selectIP(){
+		mandatoryIP.style.display = 'block';
+		electiveIP.style.display = 'none';
+		REButton.style.display = 'none';
+	}
+</script>
+
+
+<script type="text/javascript" src="main.js"></script>
+<!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
